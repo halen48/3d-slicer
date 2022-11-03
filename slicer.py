@@ -126,6 +126,9 @@ for f_name  in os.listdir(base):
                     pixels, idx_slice,show_mode = rotate_axis(pixels, show_mode,1, f_name)
                 if(event.key == ord('q')):
                     pixels, idx_slice,show_mode = rotate_axis(pixels, show_mode,-1, f_name)
+                if(event.key == ord('x')):
+                    done = True
+                    break
                 if(event.key == ord('s')):
                     
                     while show_mode != 0:
