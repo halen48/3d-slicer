@@ -16,5 +16,6 @@ Compatible with:
 * W: For all axis, transform all selected points into a rectangle
 * S: Export the selected parallelepiped into ```save_path``` directory
 * X (or X on the pygame window): Skip the current file
+* J: Skip to the next file that has not been sliced yet
 
 Good luck, have fun 😉
