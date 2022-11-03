@@ -1,5 +1,5 @@
 # 3d-slicer
-Interative slicer for 3D **normalized**(float arrays between 0.~1.) numpy arrays with visualization 
+Interative slicer for 3D **normalized**(float between 0.~1.) numpy arrays with visualization 
 
 Compatible with:
 * pygame 1.9.6
