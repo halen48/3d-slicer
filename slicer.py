@@ -13,10 +13,22 @@ import os
 
 def draw_mark(img,pos,size,mark_color):
         for i in range(1,size+1):
-            img[(pos[0]-i,pos[1])] = mark_color
-            img[(pos[0],pos[1]+i)] = mark_color
-            img[(pos[0],pos[1]-i)] = mark_color
-            img[(pos[0]+i,pos[1])] = mark_color
+            try:
+                img[(pos[0]-i,pos[1])] = mark_color
+            except:
+                pass
+            try:
+                img[(pos[0],pos[1]+i)] = mark_color
+            except:
+                pass
+            try:
+                img[(pos[0],pos[1]-i)] = mark_color
+            except:
+                pass
+            try:
+                img[(pos[0]+i,pos[1])] = mark_color
+            except:
+                pass
         return img
 
 # redimensiona a imagem para um tamanho ok
