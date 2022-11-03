@@ -2,14 +2,17 @@
 
 base = "C:/Documentos/"
 save_path = base+'/sliced/'
-
 # ===========================================================
 
 import numpy as np
 import pygame
 import cv2
 import os
+sliceds = os.listdir(save_path)
 
+print('Pygame =',pygame.__version__)
+print('Numpy =',np.__version__)
+print('OpenCV2 =',cv2.__version__)
 
 def draw_mark(img,pos,size,mark_color):
         for i in range(1,size+1):
@@ -90,8 +93,13 @@ def rotate_axis(pixels, show_mode, direction, f_name):
     return pixels, idx_slice,show_mode
 
 # ===========================================================
-
+jump = False
 for f_name  in os.listdir(base):
+    print(f_name)
+    if(jump and f_name in sliceds):
+        continue
+    else:
+        jump = False
     img = base+f_name
     if(os.path.isdir(img) or not '.npy' in img):
         continue
@@ -141,8 +149,11 @@ for f_name  in os.listdir(base):
                 if(event.key == ord('x')):
                     done = True
                     break
+                if(event.key == ord('j')):
+                    jump = True
+                    done = True
+                    break
                 if(event.key == ord('s')):
-                    
                     while show_mode != 0:
                         pixels, idx_slice,show_mode = rotate_axis(pixels, show_mode,-1, f_name)
 
