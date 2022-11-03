@@ -129,7 +129,7 @@ for f_name  in os.listdir(base):
                 if(event.key == ord('s')):
                     
                     while show_mode != 0:
-                        pixels, idx_slice,show_mode = rotate_axis(pixels, show_mode,-1)
+                        pixels, idx_slice,show_mode = rotate_axis(pixels, show_mode,-1, f_name)
 
                     #transforma os pontos em um retangulo
                     seed = get_area()
