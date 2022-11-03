@@ -15,5 +15,6 @@ Compatible with:
 * R: Shift the visualization axis to the left  [ Example: ```img.shape``` == (3,4,5) => (5,3,4) ]
 * W: For all axis, transform all selected points into a rectangle
 * S: Export the selected parallelepiped into ```save_path``` directory
+* X (or X on the pygame window): Skip the atual file
 
 Good luck, have fun 😉
